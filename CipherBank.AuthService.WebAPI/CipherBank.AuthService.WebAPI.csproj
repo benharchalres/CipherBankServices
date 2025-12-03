@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>24096dd0-ba4f-44bd-ba32-c7176253158c</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="12.1.0" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.1" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="12.1.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.11">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.22.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CipherBank.AuthService.Application\CipherBank.AuthService.Application.csproj" />
+    <ProjectReference Include="..\CipherBank.AuthService.Domain\CipherBank.AuthService.Domain.csproj" />
+    <ProjectReference Include="..\CipherBank.AuthService.Identity\CipherBank.AuthService.Identity.csproj" />
+    <ProjectReference Include="..\CipherBank.AuthService.Infrastructure.Persistence\CipherBank.AuthService.Infrastructure.Persistence.csproj" />
+  </ItemGroup>
+
+</Project>
